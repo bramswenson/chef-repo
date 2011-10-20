@@ -1,4 +1,3 @@
-domain <%= node[:resolver][:domain].nil? ? node[:resolver][:search] : node[:resolver][:domain] %>
 search <%= node[:resolver][:search] %>
 <% node[:resolver][:nameservers].each do |nameserver| -%>
 nameserver <%= nameserver %>
