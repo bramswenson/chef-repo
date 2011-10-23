@@ -1,0 +1,19 @@
+[user]
+  name  = <%= @git_name %>
+  email = <%= @git_email %>
+<%- unless @github_user.nil? or @github_token.nil? %>
+[github]
+  user  = <%= @github_user %>
+  token = <%= @github_token %>
+<% end %>
+[core]
+  editor = <%= @editor %>
+[color]
+  ui = true
+[color "diff"]
+  whitespace = red reverse
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[alias]
+  g = log --graph --oneline --color
+  s = status

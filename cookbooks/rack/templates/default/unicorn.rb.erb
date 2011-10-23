@@ -1,0 +1,14 @@
+##
+# Unicorn config at <%= @name %>
+# Managed by Chef - Local Changes will be Nuked from Orbit (just to be sure)
+##
+
+listen '<%= "#{@host}:#{@port}" %>'
+working_directory '<%= @path %>'
+timeout <%= node[:rack][:timeout] %>
+preload_app true
+worker_processes <%= node[:cpu][:total].to_i - 1 %>
+pid '<%= @pid_path %>'
+stderr_path '<%= @stderr_path %>'
+stdout_path '<%= @stdout_path %>'
+user <%= "'#{@user}', '#{@group}'" %>
