@@ -29,7 +29,7 @@ content = <<EOJSON
     "nameservers": [ #{nameservers} ],
     "search":"#{domain}"
   },
-  "run_list": [ "recipe[resolver]" ]
+  "run_list": [ "recipe[stackspin]" ]
 }
 EOJSON
 
