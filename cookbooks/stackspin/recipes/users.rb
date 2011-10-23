@@ -42,6 +42,8 @@ node['authorization']['sudo']['passwordless_groups'] << 'stackspin'
 require_recipe 'sudo'
 
 git_config 'stackspin' do
+  user 'stackspin'
+  group 'stackspin'
   action :install
   git_name 'Bram Swenson'
   git_email 'bram@craniumisajar.com'
@@ -49,3 +51,7 @@ git_config 'stackspin' do
   editor '/usr/bin/vim'
 end
 
+bash 'ensure home dir permissions' do
+  code "chown -R stackspin:stackspin #{home_path}"
+  not_if %Q( test "$(find #{home_path} -not -user 4200)" = "" )
+end
