@@ -33,6 +33,6 @@ content = <<EOJSON
 }
 EOJSON
 
-File.open('/srv/chef-solo/node.json','w') do |f|
+File.open('/srv/stackspin/chef-solo/node.json','w') do |f|
   f.write(content)
 end
