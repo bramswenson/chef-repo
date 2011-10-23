@@ -24,9 +24,6 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require_recipe 'syslog-ng'
-require_recipe 'resolver'
 require_recipe 'stackspin::users'
 require_recipe 'stackspin::utilities'
-require_recipe 'stackspin::rbenv'
 

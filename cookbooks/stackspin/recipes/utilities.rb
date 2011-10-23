@@ -23,6 +23,8 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
+require_recipe 'syslog-ng'
+require_recipe 'resolver'
 require_recipe 'git'
 require_recipe 'byobu'
 require_recipe 'vim-gnome'
